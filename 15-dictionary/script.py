@@ -18,7 +18,11 @@ pincodes["560086"]="Bengaluru-1"
 print(pincodes["560086"])
 
 print(pincodes.get("5600861")) # get is no value it returns None
-print(pincodes["5600861"]) # is no value it throws KeyError
+
+try:
+    print(pincodes["5600861"]) # is no value it throws KeyError
+except KeyError:
+    print("no key found")
 
 
 
