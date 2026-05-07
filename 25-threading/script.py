@@ -20,11 +20,12 @@ t2 = threading.Thread(target=worker,args=("thread-2",))
 t1.start()
 t2.start()
 
+
+# how long it is blocked ? as long as t1 and t2 are running it is blocked.
+# main thread is blocked until t1 and t2 are completed
+print("Main thread continues...")
 t1.join() # join the threads so that main thread can wait until this thread can complete execution and then join
 t2.join() # join the threads so that main thread can wait until this thread can complete execution and then join
 
-
-# main thread is blocked until t1 and t2 are completed
-print("Main thread continues...")
 
 # GIL --> Global Interpretter Lock, Pytho bytecode can run only one thread at a time , bcz of GIL
