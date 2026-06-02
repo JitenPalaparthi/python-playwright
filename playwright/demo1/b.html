@@ -1,0 +1,46 @@
+<html>
+    <body>
+
+    <div>
+
+     <h1 id="heading">Hello World!</h1>
+     <button id="login">Login</button>
+     <input type="text" id="inputBox" label="enter some text">
+
+     <p class="msg">First</p>
+     <p class="msg">/p>
+
+    </div>
+
+    <script>
+
+       let btn = document.getElementById("login");
+       let inputBox = document.getElementById("inputBox");
+       let heading = document.getElementById("heading");
+
+       let items = document.getElementsByClassName("msg")
+
+       let divs = document.getElementsByTagName("div")
+         console.log("-----------")
+
+        console.log(divs[0].innerHTML)
+
+        console.log("------------")
+     
+       console.log(btn.innerHTML);
+      
+       console.log(inputBox)
+       console.log(heading)
+       console.log(heading.innerText)
+
+       console.log(items[1].innerText) // HTMLCollection
+
+       btn.onclick = function(){
+
+        heading.innerText = "Hello " + inputBox.value;
+       }
+
+
+
+    </script>
+</body></html>
